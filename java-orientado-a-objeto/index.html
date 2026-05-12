@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caixa Eletrônico</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1 class="title">Caixa Eletrônico</h1>
+
+        <p class="balance">
+          Saldo:
+          <span class="balance-value" id="valorDisponivel">R$ 0,00</span>
+        </p>
+
+        <form class="form">
+          <fieldset class="fieldset">
+            <legend class="legend">Saque</legend>
+
+            <label class="label" for="saque"> Valor do saque </label>
+
+            <input
+              class="input"
+              type="number"
+              id="saque"
+              placeholder="Digite o valor para saque"
+            />
+
+            <button
+              class="button withdraw-button"
+              type="button"
+              onclick="caixaEletronico.sacar()"
+            >
+              Sacar
+            </button>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend class="legend">Depósito</legend>
+
+            <label class="label" for="deposito"> Valor do depósito </label>
+
+            <input
+              class="input"
+              type="number"
+              id="deposito"
+              placeholder="Digite o valor para depósito"
+            />
+
+            <button
+              class="button deposit-button"
+              type="button"
+              onclick="caixaEletronico.depositar()"
+            >
+              Depositar
+            </button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>

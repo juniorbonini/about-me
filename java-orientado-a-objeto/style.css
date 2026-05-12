@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(59, 130, 246, 0.2);
+
+  animation: floating 4s ease-in-out infinite;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.balance {
+  text-align: center;
+
+  font-size: 1.1rem;
+  color: #cbd5e1;
+
+  margin-bottom: 30px;
+}
+
+.balance-value {
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  transition: 0.3s ease;
+}
+
+.fieldset:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(56, 189, 248, 0.5);
+
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.legend {
+  padding: 0 10px;
+
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.label {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.input {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
+  transform: scale(1.02);
+}
+
+.button {
+  border: none;
+  border-radius: 12px;
+
+  padding: 14px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.withdraw-button {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.deposit-button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.button:hover {
+  transform: translateY(-3px) scale(1.02);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
